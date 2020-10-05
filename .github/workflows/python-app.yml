@@ -35,4 +35,4 @@ jobs:
     - name: Run tests
       run: |
         python3 unittest_md.py
-        python3 inittest_md.py
+        python3 inttest_md.py
