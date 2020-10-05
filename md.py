@@ -34,7 +34,7 @@ def run_md():
 	MaxwellBoltzmannDistribution(atoms, 300 * units.kB)
 
 # We want to run MD with constant energy using the VelocityVerlet algorithm.
-	dyn = VelocityVerlet(atoms, 5 * units.fs)  # 10 fs time step.
+	dyn = VelocityVerlet(atoms, 3 * units.fs)  # 10 fs time step.
 	traj = Trajectory('cu.traj','w', atoms)
 	dyn.attach(traj.write, interval=10)
 
@@ -45,7 +45,7 @@ def run_md():
 
 # Now run the dynamics
 	printenergy(atoms)
-	for i in range(10):
+	for i in range(20):
 		dyn.run(10)
 		printenergy(atoms)
 
